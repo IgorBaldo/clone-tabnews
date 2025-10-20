@@ -1,0 +1,1 @@
+npx commitlint --edt $1
