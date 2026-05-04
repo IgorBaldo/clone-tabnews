@@ -20,7 +20,7 @@ exports.up = (pgm) => {
       type: "varchar(60)",
       notNull: true,
     },
-    created_up: {
+    created_at: {
       type: "timestamptz",
       notNull: true,
       default: pgm.func("timezone('utc', now())"),
