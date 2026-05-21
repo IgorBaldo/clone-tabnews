@@ -180,7 +180,7 @@ describe("PATCH /api/v1/activations/[token_id]", () => {
         {
           method: "PATCH",
           headers: {
-            cookie: `session_id=${user1SessionObject.token}`,
+            Cookie: `session_id=${user1SessionObject.token}`,
           },
         },
       );
