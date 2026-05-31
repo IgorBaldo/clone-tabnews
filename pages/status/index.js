@@ -24,7 +24,7 @@ function UpdatedAt() {
   let updatedAtText = "Carregando...";
 
   if (!isLoading && data) {
-    updatedAtText = new Date(data.update_at).toLocaleString("pt-BR");
+    updatedAtText = new Date(data.updated_at).toLocaleString("pt-BR");
   }
   return <div>Última atualização: {updatedAtText}</div>;
 }
