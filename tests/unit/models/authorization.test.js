@@ -3,13 +3,13 @@ import { InternalServerError } from "infra/errors.js";
 
 describe("models/authorization.js", () => {
   describe(".can()", () => {
-    test("without 'user'", () => {
+    test("without `user`", () => {
       expect(() => {
         authorization.can();
       }).toThrow(InternalServerError);
     });
 
-    test("without 'user.features'", () => {
+    test("without `user.features`", () => {
       const createdUser = {
         username: "UserWithoutFeatures",
       };
@@ -42,7 +42,7 @@ describe("models/authorization.js", () => {
       }).toThrow(InternalServerError);
     });
 
-    test("without 'user.features'", () => {
+    test("without `user.features`", () => {
       const createdUser = {
         username: "UserWithoutFeatures",
       };
