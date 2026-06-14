@@ -3,13 +3,13 @@ import { InternalServerError } from "infra/errors.js";
 
 describe("models/authorization.js", () => {
   describe(".can()", () => {
-    test("without 'user'", () => {
+    test("without `user`", () => {
       expect(() => {
         authorization.can();
       }).toThrow(InternalServerError);
     });
 
-    test("without 'user.features'", () => {
+    test("without `user.features`", () => {
       const createdUser = {
         username: "UserWithoutFeatures",
       };
@@ -42,7 +42,7 @@ describe("models/authorization.js", () => {
       }).toThrow(InternalServerError);
     });
 
-    test("without 'user.features'", () => {
+    test("without `user.features`", () => {
       const createdUser = {
         username: "UserWithoutFeatures",
       };
@@ -78,8 +78,8 @@ describe("models/authorization.js", () => {
         id: 1,
         username: "Resource",
         features: ["read:user"],
-        created_at: "2026-0101T00:00:00.000Z",
-        updated_at: "2026-0101T00:00:00.000Z",
+        created_at: "2026-01-01T00:00:00.000Z",
+        updated_at: "2026-01-01T00:00:00.000Z",
         email: "resource@resource.com",
         password: "resource",
       };
@@ -94,8 +94,8 @@ describe("models/authorization.js", () => {
         id: 1,
         username: "Resource",
         features: ["read:user"],
-        created_at: "2026-0101T00:00:00.000Z",
-        updated_at: "2026-0101T00:00:00.000Z",
+        created_at: "2026-01-01T00:00:00.000Z",
+        updated_at: "2026-01-01T00:00:00.000Z",
       });
     });
   });
